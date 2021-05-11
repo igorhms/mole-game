@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Game</title> 
+    <link rel="stylesheet" href="css/tabuleiro.css">
+    <link rel="stylesheet" href="css/jAlertWifi.css">
+    <link rel="stylesheet" href="css/game.css">
+    <script src="js/game.js"></script>
+    <script src="js/jAlertWifi.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/toupeira.gif" alt="" width="60" height="45" class="d-inline-block align-text-top">
+                    <span>Mole Game</span>
+                </a>
+                <ul class="nav justify-content-center">
+                    <li>
+                        <p>Tempo: 00:<span id="chrono">00</span></p>
+                    </li>
+                    <li>
+                        <p>Pontuação: <span id="score">0</span></p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div id="board"></div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container text-center text-lg-start justify-content-center">
+            <label for="level" class="float-left">Nível selecionado: </label>
+            <select id="level" class="float-left" onchange="fillBoard()">
+                <option value="easy" selected>Fácil</option>
+                <option value="medium">Médio</option>
+                <option value="hard">Difícil</option>
+            </select>
+            <button id="btnPlay" class="btn btn-success">Play</button>
+            <button id="btnPause" class="btn btn-primary" disabled>Pause</button>
+            <button id="btnStop" class="btn btn-warning" disabled>Stop</button>
+            <button type="button" id="btnExit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Exit</button>
+            <button id="btnPlacar" class="btn btn-info">Ranking</button>
+        </div>
+    </footer>
+</body>

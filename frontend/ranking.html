@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mole Game │ Ranking</title>
+    <link rel="stylesheet" href="css/tabuleiro.css">
+    <link rel="stylesheet" href="css/jAlertWifi.css">
+    <link rel="stylesheet" href="css/game.css">
+    <script src="js/jAlertWifi.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/ranking.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/toupeira.gif" alt="" width="60" height="45" class="d-inline-block align-text-top">
+                    <span>Mole Game</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Posição</th>
+                        <th scope="col">Usuário</th>
+                        <th scope="col">Dificuldade</th>
+                        <th scope="col">Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container text-center text-lg-start justify-content-center">
+            <label for="level" class="float-left">Nível de ranking selecionado: </label>
+            <select id="level" class="float-left" onchange="fillBoard()">
+                <option value="easy" selected>Fácil</option>
+                <option value="medium">Médio</option>
+                <option value="hard">Difícil</option>
+            </select>
+            <button id="btnShow" class="btn btn-success">Mostrar ranking</button>
+            <button id="btnBack" class="btn btn-danger">Voltar ao jogo</button>
+        </div>
+    </footer>
+</body>
+
+</html>
